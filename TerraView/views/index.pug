@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  center
+    h1 TerraView Api
+    //- #{JSON.stringify(articles)}
+    form(action="/search") 
+    p Search for the name of a image you want to geo locate!
+    input(type="text" name="search" id="search" placeholder="image name" class="input-group mb-3")
+    br
+    button.srcBtn(class="btn btn-secondary") search
+    br
+    br
+    div(id="map" class="border-10")
+    script(src='/javascripts/getImages.js')
+    br
+    br
+    button1.delBtn(class="btn btn-secondary") Reset markers
+
+  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" 
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+    crossorigin="anonymous")
+
+  
